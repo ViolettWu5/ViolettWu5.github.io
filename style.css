@@ -1,37 +1,212 @@
+/***** CSS Reset *****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, img, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+menu, nav, output {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 body {
-  background-color: black;
+	line-height: 1;
 }
-#demo {
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  text-align:center;
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/***** All *****/
+*{
+	box-sizing: border-box;
+}
+/***** Header ******/
+
+/* menu list */
+#header {
+	width: 100%;
+	height: 65px;
+}
+.menu ul {
   display: flex;
-  width: 100%;
-  justify-content: center;
- 
+  flex-direction: row; 
+  justify-content: flex-end;  
+}
+.title {
+	font-size: 20px;
+	color: #000000;
+  padding: 0 10px;
+	text-decoration: none;
+  position:absolute ; top:5px ;
 }
 
-@keyframes move {
-  0% {
-    transform: translateX(-1000px);
+.menu ul li a {
+	display: block;
+	font-size: 20px;
+	color: #000000;
+  padding: 0 10px;
+	text-decoration: none;
+}
+
+/* hamburger menu */
+.menu_button  {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: 20px;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 60px;
+	color: #AAA;
+	background: transparent;
+	border: none;
+	display: none;
+}
+
+.menu_button_checkbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+  opacity: 0;
+}
+
+.menu_button_checkbox:checked ~ .menu {
+	display: block;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .title{
+     text-align:center;
+     margin:auto;
+    
   }
-  100% {
-    transform: translateX(0px);
+
+
+	.menu_button {
+		display: block;
+	}
+	
+	.menu ul {
+		flex-direction: column;
+    padding-top: 60px;
+	}
+	
+  .menu ul li a {
+		font-size: 20px;
+		text-align: center;
+		padding: 10px 10px;
+		border-bottom: 1px solid #AAA;
+	}
+	.responsive {
+    padding: 10px;
+    float:left;
+    width: 95%;
+    margin:0 20px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center; 
+  }
+	
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+     text-align:center;
+     width:100%;
+    
+  }
+  .menu {
+		display: none;
+	} 
+
+	.menu_button {
+		display: block;
+	}
+	
+	.menu ul {
+		flex-direction: column;
+    padding-top: 60px;
+	}
+	
+  .menu ul li a {
+		font-size: 20px;
+		text-align: center;
+		padding: 10px 10px;
+		border-bottom: 1px solid #AAA;
+	}
+	.responsive {
+    padding: 10px;
+    float:left;
+    width: 95%;
+    margin:0 20px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center; 
+  }
+  .container{
+    width:50%;
+    text-align:center;
   }
 }
-
-.char {
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  text-align:center;
-  animation-fill-mode: forwards;
-  animation-name: move;
-  animation-duration: 2s;
-  transform: translateX(-1000px);
+div.img img {
+    width: 100%;
+    height: auto;
 }
 
-.char:hover {
-  filter: blur(3px)
+div.desc {
+  padding: 10px;  
+  text-align: center;
+  background-color: #b0e0e6; 
+   
+}
+
+
+* {
+    box-sizing: border-box;
+}
+.container{
+  text-align: center;
+  padding: 300px;
+  background-color:#b0e0e6;
+  
+}
+
+.responsive {
+    padding: 10px;
+    float:left;
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    margin:0 30px;
+    padding-left:20px;
+    padding-right:20px;
+    
+}
+/*.content{
+width:1200px;
+margin-left:auto;
+margin-right:auto;
 }
