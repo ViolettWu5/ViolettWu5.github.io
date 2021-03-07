@@ -1,7 +1,9 @@
 def calculate(min, max):
-    return ((min + max) * (max - min + 1)) / 2
+    sum = 0
+    for i in range(min, max + 1):
+        sum += i
+    print(sum)
 
-total1 = calculate(1, 3)
-total2 = calculate(4, 8)
-print(total1)
-print(total2)
+
+calculate(1, 3)
+calculate(4, 8)
