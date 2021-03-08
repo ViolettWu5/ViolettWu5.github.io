@@ -1,0 +1,80 @@
+//#1
+function calculate(min, max){
+    let sum = 0;
+    for (let i =min;i < max+1;i++)
+    {sum += i} 
+    console.log(sum);}
+
+
+calculate(1, 3)
+calculate(4, 8)
+
+//#2
+
+function avg(data){
+  let count = data["count"];
+      let sum = 0;
+      let employee = data["employees"];
+      for (let i = 0; i < employee.length; i++) {
+        sum += employee[i]["salary"];
+      }
+      let average = sum / count;
+      console.log(average);
+      }
+    avg({
+      count: 3,
+      employees: [
+        {
+          name: "John",
+          salary: 30000,
+        },
+        {
+          name: "Bob",
+          salary: 60000,
+        },
+        {
+          name: "Jenny",
+          salary: 50000,
+        },
+      ],
+    });
+
+//#3
+
+function maxProduct(nums){ 
+    let cntx = 0;
+    if (nums.length == 2){
+        cntx = nums[0] * nums[1];}
+    else{
+        for (let i=0; i < nums.length;i++){
+            for (let j=i+1;j< nums.length;j++){
+                let sum = nums[i] * nums[j]
+                if ( sum >  cntx){
+                    cntx = sum;
+            }
+          }
+        }
+      }
+      console.log(cntx);
+    }
+
+maxProduct([5, 20, 2, 6])
+maxProduct([10, -20, 0, 3])
+maxProduct([1,-10])
+
+//#4
+
+function twoSum(nums, target){  
+  
+   for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+          if (nums[i] + nums[j] == target) {
+            return [i, j];
+          }
+        }
+      }
+      return [];
+    }
+
+    result = twoSum([2, 11, 7, 15], 9);
+    console.log(result);
