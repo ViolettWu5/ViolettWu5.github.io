@@ -35,7 +35,7 @@ with open("data.txt", "w", encoding="utf-8") as file:
     i = 0
     for item in itemArr:
         if i == resultsLen - 1:
-            file.write(item)  # 最後一行不換行
+            file.write(item)  
         else:
             file.write(item + "\n")
         i += 1
